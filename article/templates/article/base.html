@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+    <head>
+        <title>Research Application</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-thme.min.css">
+        <link href="//fonts.googleapis.com/css?family=UnifrakturMaguntia&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Anton&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Noto Serif JP&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=M PLUS 1p&subset=Bold 700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/article.css' %}">
+    </head>
+    <body>
+        <h1>
+            <a href="/">Research Application</a>
+            <div class="search_form">
+                <form action="" method="get">
+                    <input name="query" value="{{request.GET.query}}" type="text">
+                    <button type="submit">検索</button>
+                </form>
+            </div>
+        </h1>
+
+
+        <div class="contents">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

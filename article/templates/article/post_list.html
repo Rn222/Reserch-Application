@@ -1,0 +1,13 @@
+{% extends 'article/base.html' %}    
+
+{% block content %}
+    {% for post in object_list %}
+        <div>
+            <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+            <p>{{post.created_date}} Published By <a href="{{post.domain}}">{{post.domain}}</a></p>
+            <p class="text">
+                {{post.text|linebreaksbr|truncatechars:280}}
+            </p>
+        </div>
+    {% endfor %}
+{% endblock %}
